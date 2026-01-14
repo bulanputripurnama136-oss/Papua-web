@@ -1,0 +1,278 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+}
+.bg-transparan{
+  background: rgba(255, 255, 255, 0.75); /* putih transparan */
+  padding: 25px;
+  border-radius: 12px;
+}
+/* =========================
+   BODY & BACKGROUND
+========================= */
+body.latar-papua {
+  font-family: 'Poppins', sans-serif;
+  color: #3a2f2a;
+
+  background-image: url("img/bg-1.png");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar-kaca {
+  background: rgba(0, 0, 80, 0.55);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.waktu-navbar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  line-height: 1.1;
+}
+
+#tanggalNavbar {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+#jamNavbar {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* =========================
+   DROPDOWN & SUBMENU
+========================= */
+.dropdown-menu .dropdown-item:hover {
+  background-color: transparent;
+  color: #f8d65a;
+}
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 0.1rem;
+
+  opacity: 0;
+  transform: translateX(10px);
+  transition: all 0.25s ease;
+}
+
+.dropdown-submenu.show > .dropdown-menu {
+  display: block;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* =========================
+   BAGIAN UTAMA
+========================= */
+.bagian-utama {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: #ffffff;
+}
+
+/* =========================
+   JUDUL SVG
+========================= */
+.judul-svg {
+  width: 80%;
+  max-width: 900px;
+  height: auto;
+}
+
+.judul-svg text {
+  font-family: 'Cinzel', serif;
+  font-size: 68px;
+  letter-spacing: 6px;
+  font-weight: 800;
+
+  fill: url(#gradPapua);
+
+  text-shadow:
+    0 2px 3px rgba(40, 25, 8, 0.9),
+    0 6px 14px rgba(0, 0, 0, 0.65),
+    0 0 26px rgba(92, 60, 18, 0.65);
+
+  animation: fadeUp 1.2s ease-out forwards;
+}
+
+/* =========================
+   SUBJUDUL & SLOGAN
+========================= */
+.subjudul {
+  font-size: 18px;
+  margin-top: -10px;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+  color: #4b3210;
+
+  text-shadow:
+    0 1px 2px rgba(0,0,0,0.5),
+    0 3px 8px rgba(61, 38, 10, 0.6);
+
+  animation: fadeUp 1.6s ease-out forwards;
+}
+
+.slogan {
+  font-size: 20px;
+  margin-top: 14px;
+  font-style: italic;
+  font-weight: 600;
+  color: #6a4a1a;
+
+  text-shadow:
+    0 2px 4px rgba(0,0,0,0.55),
+    0 4px 10px rgba(58, 36, 9, 0.7);
+
+  animation: fadeUp 2s ease-out forwards;
+}
+
+/* =========================
+   CARD & MODAL
+========================= */
+.card {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+
+  /* GARIS COKLAT ASLI (TANPA HOVER) */
+  border: 2.5px solid #7a4e1d; /* coklat tegas */
+  border-radius: 14px;
+  background-color: #ffffff;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* LAPISAN GLOW */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+
+  box-shadow: 0 0 0 rgba(200, 140, 60, 0);
+  transition: box-shadow 0.35s ease;
+}
+
+/* HOVER: MEMBESAR + GLOW */
+.card:hover {
+  transform: scale(1.06);
+  box-shadow:
+    0 14px 35px rgba(0, 0, 0, 0.25);
+}
+
+.card:hover::before {
+  box-shadow:
+    0 0 22px rgba(200, 140, 60, 0.75),
+    inset 0 0 14px rgba(200, 140, 60, 0.45);
+}
+
+.peta-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.peta-wrapper img {
+  width: 90%;
+  max-width: 900px;
+}
+.logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  /* latar transparan */
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+
+  /* PENTING: biar tidak kepanjangan */
+  width: fit-content;
+  margin: auto;
+}
+
+.logo-wrapper img {
+  width: 100%;
+  max-width: 700px;   /* sesuaikan dengan foto */
+  height: auto;       /* JANGAN pakai height tetap */
+  display: block;
+}
+
+
+
+
+
+/* =========================
+   FOOTER
+========================= */
+.logo {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ffc107;
+}
+
+h5 {
+  text-align: center;
+}
+
+/* =========================
+   ANIMASI
+========================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .judul-svg text {
+    font-size: 44px;
+    letter-spacing: 4px;
+  }
+}
