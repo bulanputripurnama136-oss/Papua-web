@@ -1,0 +1,338 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+}
+.waktu-navbar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  line-height: 1.1;
+}
+
+#tanggalNavbar {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+#jamNavbar {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+
+
+/*===== Backgroun =====*/
+body.latar-papua {
+  font-family: 'Poppins', sans-serif;
+  color: #3a2f2a;
+
+  background-image: url("img/bg.png");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+/* ================================
+   Navbar Kaca
+================================ */
+.navbar-kaca {
+  background: rgba(0, 0, 80, 0.55);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* ================================
+   Dropdown Item Hover (Efek Lama)
+================================ */
+.dropdown-menu .dropdown-item:hover {
+  background-color: transparent;
+  color: #f8d65a;
+}
+
+/* ================================
+   Submenu (Multi Level)
+================================ */
+.dropdown-submenu {
+  position: relative;
+}
+
+/* Default submenu tersembunyi */
+.dropdown-submenu > .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 0.1rem;
+
+  /* Efek tambahan */
+  opacity: 0;
+  transform: translateX(10px);
+  transition: all 0.25s ease;
+}
+
+/* Submenu aktif (klik) */
+.dropdown-submenu.show > .dropdown-menu {
+  display: block;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+
+/*===== Bagian Utama =====*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bagian-utama {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  text-align: center;
+  color: #ffffff;
+}
+
+/* SVG JUDUL */
+.judul-svg {
+  width: 80%;
+  max-width: 900px;
+  height: auto;
+}
+
+.judul-svg text {
+  font-family: 'Cinzel', serif;
+  font-size: 68px;
+  letter-spacing: 6px;
+  fill: url(#gradPapua);
+
+  text-shadow:
+    0 0 12px rgba(255, 255, 255, 0.35),
+    0 4px 20px rgba(107, 74, 43, 0.35);
+
+  animation: fadeUp 1.2s ease-out forwards;
+}
+
+/* SUBJUDUL */
+.subjudul {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  margin-top: -10px;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,0.9);
+
+  animation: fadeUp 1.6s ease-out forwards;
+}
+
+/* SLOGAN */
+.slogan {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  margin-top: 14px;
+  font-style: italic;
+  color: #f6cb81;
+
+  animation: fadeUp 2s ease-out forwards;
+}
+
+/* ANIMASI */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .judul-svg text {
+    font-size: 44px;
+    letter-spacing: 4px;
+  }
+}
+
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   BAGIAN CARD (FINAL, SIMPLE)
+========================= */
+
+.bagian-kartu {
+  padding: 70px 40px;
+}
+
+/* BARIS */
+.baris-atas,
+.baris-bawah {
+  display: grid;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+/* 4 ATAS */
+.baris-atas {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* 5 BAWAH */
+.baris-bawah {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+/* LINK */
+.link-kartu {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* CARD */
+.kartu-info {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  padding: 20px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+/* IMAGE */
+.kartu-info img {
+  width: 80px;
+  margin-bottom: 10px;
+  transition: 0.3s ease;
+}
+
+/* TEXT */
+.kartu-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+.kartu-info p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* HOVER (BALIK SEPERTI SEMULA) */
+.link-kartu:hover .kartu-info {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.25);
+  background: rgba(255,255,255,0.75);
+}
+
+.link-kartu:hover img {
+  transform: scale(1.05);
+}
+
+.link-kartu:hover h3,
+.link-kartu:hove
+
+
+/* =========================
+   SECTION PAHLAWAN PAPUA
+========================= */
+
+.pahlawan-section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+#carouselPahlawan {
+  max-width: 100%;
+}
+
+.pahlawan-img {
+  width: 600px;
+  max-width: 90%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+
+/* ===============================
+   BAGIAN PENUTUP
+================================ */
+.bagian-penutup {
+  min-height: 450px;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.kutipan {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* Footer */
+footer a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ffc107; /* kuning */
+}
+h5 {
+  text-align: center;
+}
+
+
+/* ===============================
+   RESPONSIVE (MOBILE)
+================================ */
+@media (max-width: 768px) {
+  .judul-utama {
+    flex-direction: column;
+  }
+
+  .logo-papua {
+    height: 70px;
+  }
+
+  .teks-judul h1 {
+    font-size: 42px;
+  }
+
+  .bingkai-judul {
+    padding: 20px;
+  }
+
+  .bagian-pencarian input {
+    width: 90%;
+  }
+}
+
